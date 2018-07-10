@@ -1,0 +1,30 @@
+﻿@model NerdDinner2.Models.Dinner
+
+<div id="theMap">
+</div>
+
+
+<script src="~/Scripts/Map.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARO_GKPZGUuXd515ZRpkxG2rDyXey0V5c"></script>
+
+<script type="text/javascript">
+    var lat = @Model.Latitude;
+    var lng = @Model.Longitude;
+
+    LoadMap(lng, lat);
+    LoadPin(lng, lat, "Something", "Something");
+
+
+    function setMapHeightOnResize() {
+        var formsHeight = $('#forms').height();
+        $('#mapDiv').css({ height: formsHeight });
+    }
+
+    setMapHeightOnResize();
+    $(window).resize(function() {
+        setMapHeightOnResize();
+    });
+
+</script>
+
+

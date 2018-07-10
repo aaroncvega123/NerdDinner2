@@ -1,0 +1,68 @@
+﻿@model NerdDinner2.Models.Dinner
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    
+    <p>
+        <strong>When:</strong>
+        @Model.EventDate.ToShortDateString()
+        
+        <strong>@Html.Raw("@")</strong>
+        @Model.EventDate.ToShortTimeString()
+    </p>
+    
+    <p>
+        <strong>Where:</strong>
+        @Html.Encode(Model.Address)
+        @Html.Encode(Model.Country)
+    </p>
+    
+    <p>
+        <strong>Description:</strong>
+        @Html.Encode(Model.Description)
+    </p>
+    
+    <p>
+        <strong>Organizer:</strong>
+        @Html.Encode(Model.HostedBy)
+        @Html.Encode(Model.ContactPhone)
+    </p>
+    
+    <p>
+        @Html.ActionLink("Edit Dinner", "Edit", new { id = Model.DinnerID })
+        @Html.ActionLink("Delete Dinner", "Delete", new { id = Model.DinnerID })
+    </p>
+    
+    @if (Request.IsAuthenticated)
+    {
+        if (Model.IsUserRegistered(Context.User.Identity.Name))
+        {
+            <p>You are registered for this event!</p>
+        }
+        else
+        {
+            using (Ajax.BeginForm("Register", "RSVP", new{id = Model.DinnerID}, new AjaxOptions {UpdateTargetId = "rsvpmsg"}))
+            {
+                <div id="rsvpmsg">
+                    <input type="submit" value="RSVP for this Event"/>
+                </div>
+            }
+        }
+    }
+    else
+    {
+        <p><a href="/Account/Login">Login</a> to RSVP this event.</p>
+    }
+
+
+
+</fieldset>
+
+<script type ="text/javascript">
+
+</script>

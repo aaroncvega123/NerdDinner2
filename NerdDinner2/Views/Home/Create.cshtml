@@ -1,0 +1,53 @@
+﻿@using NerdDinner2.Models
+@model NerdDinner2.Models.Dinner
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Create New Dinner</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        
+        <div class="editor-label">
+            @Html.LabelFor(dinner => dinner.Title)
+        </div>
+        <div class ="editor-field">
+            @Html.TextBoxFor(dinner => dinner.Title)
+            @Html.ValidationMessageFor(dinner => dinner.Title)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(dinner => dinner.EventDate)
+        </div>
+        <div class ="editor-field">
+            @Html.TextBoxFor(dinner => dinner.EventDate)
+            @Html.ValidationMessageFor(dinner => dinner.EventDate)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(dinner => dinner.Address)
+        </div>
+        <div class ="editor-field">
+            @Html.TextBoxFor(dinner => dinner.Address)
+            @Html.ValidationMessageFor(dinner => dinner.Address)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(dinner => dinner.HostedBy)
+        </div>
+        <div class ="editor-field">
+            @Html.TextBoxFor(dinner => dinner.HostedBy)
+            @Html.ValidationMessageFor(dinner => dinner.HostedBy)
+        </div>
+        
+        <p>
+            <input type="submit" value="Create"/>
+        </p>
+
+    </fieldset>
+}

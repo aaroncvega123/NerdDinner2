@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdDinner2", "NerdDinner2\NerdDinner2.csproj", "{600A8D65-289F-479C-9D24-D25F6680B322}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdDinner2.Tests", "NerdDinner2.Tests\NerdDinner2.Tests.csproj", "{A2BA678A-2512-4072-89D7-D61D22B9EB95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{600A8D65-289F-479C-9D24-D25F6680B322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600A8D65-289F-479C-9D24-D25F6680B322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600A8D65-289F-479C-9D24-D25F6680B322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600A8D65-289F-479C-9D24-D25F6680B322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BA678A-2512-4072-89D7-D61D22B9EB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BA678A-2512-4072-89D7-D61D22B9EB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BA678A-2512-4072-89D7-D61D22B9EB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BA678A-2512-4072-89D7-D61D22B9EB95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E25F2DB0-65CC-477C-B22F-1972B75AD0AE}
+	EndGlobalSection
+EndGlobal
